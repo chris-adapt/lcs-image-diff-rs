@@ -9,14 +9,14 @@ extern crate clap;
 mod mkdir;
 mod rename;
 
-use std::path::Path;
-use image::*;
-use rename::*;
-use mkdir::*;
 use clap::{App, Arg};
-use futures_cpupool::CpuPool;
 use futures::{future, Future};
+use futures_cpupool::CpuPool;
+use image::*;
 use lcs_image_diff::compare;
+use mkdir::*;
+use rename::*;
+use std::path::Path;
 
 static RATE: f32 = 100.0 / 256.0;
 
